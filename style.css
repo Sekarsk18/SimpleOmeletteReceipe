@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+:root {
+  --Nutmeg: hsl(14, 45%, 36%);
+  --DarkRaspberry: hsl(332, 51%, 32%);
+  --White: hsl(0, 0%, 100%);
+  --RoseWhite: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --LightGrey: hsl(30, 18%, 87%);
+  --WengeBrown: hsl(30, 10%, 34%);
+  --DarkCharcoal: hsl(15, 4%, 18%);
+
+  --primaryfont: 1.8rem;
+  --secondaryfont: 1.1rem;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: outfit;
+}
+
+.container{
+    background-color: var(--Eggshell);
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-template{
+    width:60%;
+    background-color: var(--White);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    margin-block: 6rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.img-cont img{
+    border-radius: 1rem;
+    width:100%;
+}
+
+.header {
+    margin-block: 1.2rem; 
+}
+
+.header h2{
+    font-family: "young serif";
+    font-size: 2.3rem;
+    font-weight: normal;
+    padding: 0.5rem 0;
+    color: var(--DarkCharcoal)
+}
+
+.header p {
+    font-size: var(--secondaryfont);
+    color: var(--WengeBrown);
+}
+
+.preparation {
+    background-color: var(--RoseWhite);
+    margin-block: 2rem;
+    padding: 1.5rem
+}
+
+.preparation span {
+    display: inline-block;
+    color: var(--DarkRaspberry);
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.preparation ul li {
+    font-size: var(--secondaryfont);
+    color: var(--WengeBrown);
+    padding-block: 0.3rem;
+    margin-left: 1.8rem;
+    padding-left: 1rem;
+}
+
+.preparation ul li::marker {
+    color: var(--DarkRaspberry);
+    font-size: 0.9rem;
+}
+
+.ingredients span{
+    display: inline-block;
+    color: var(--Nutmeg);
+    font-family: 'young serif';
+    font-size: var(--primaryfont);
+    margin-bottom: .5rem;
+}
+
+.ingredients ul li{
+    font-size: var(--secondaryfont);
+    margin-left: 1.5rem;
+    color: var(--WengeBrown);
+    padding-block: 0.3rem;
+    padding-left: 1rem;
+}
+
+.ingredients ul li::marker{
+    color:var(--Nutmeg);
+    font-size: 0.9rem;
+}
+
+.ingredients {
+    padding-bottom: 2rem;
+    border-bottom: 0.1px solid rgba(218, 205, 205, 0.705);
+}
+
+.instruction span {
+    display: inline-block;
+    color: var(--Nutmeg);
+    font-family: 'young serif';
+    font-size: var(--primaryfont);
+    margin-bottom: .5rem;
+}
+
+.instruction ol li{
+    font-size: var(--secondaryfont);
+    margin-left: 1.5rem;
+    color: var(--WengeBrown);
+    padding-block: 0.3rem;
+    padding-left: 1rem;
+}
+
+.instruction ol li::marker{
+    color:var(--Nutmeg);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.instruction {
+    padding-block: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.1px solid rgba(218, 205, 205, 0.705);
+}
+
+.nutritions span{
+    display: inline-block;
+    color: var(--Nutmeg);
+    font-family: 'young serif';
+    font-size: var(--primaryfont);
+    margin-block: .5rem;
+}
+
+.nutritions p{
+    font-size: var(--secondaryfont);
+    color: var(--WengeBrown);
+    padding-block: 0.3rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 1rem 0 0.8rem 2.5rem ;
+    color:var(--WengeBrown);
+    border-bottom: 0.1px solid rgba(218, 205, 205, 0.705);
+}
+
+table td b {
+    color: var(--Nutmeg);
+}
+
+.last-element {
+    border: 0;
+}
+
+
+@media screen and (max-width:375px) {
+    :root{
+        --primaryfont: 1.8rem;
+        --secondaryfont: .93rem;
+    }
+
+    .recipe-template {
+        width: 100%;
+        margin-block: 0;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .header h2 {
+        font-size: 2rem;
+    }
+
+    .img-cont img {
+        border-radius: 0;
+    }
+
+    .header,
+    .ingredients,
+    .instruction,
+    .nutritions{
+        margin-inline: 2rem;
+    }
+
+    .nutritions {
+        padding-bottom: 1rem;
+    }
+
+}
